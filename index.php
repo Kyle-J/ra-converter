@@ -11,7 +11,7 @@ $time            = isset($_GET['time']) ? $_GET['time'] : 'now';
 $time = strtotime($time);
 
 $radec = new radec($latitude, $longitude);
-$radec->setradec($right_ascension, $right_ascension);
+$radec->setradec($right_ascension, $declination);
 
 $azimuth  = $radec->getAZ($time);
 $altitude = $radec->getALT($time);
